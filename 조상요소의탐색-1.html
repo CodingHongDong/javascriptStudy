@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>.parent()</title>
+  <script src="libs/jquery-3.5.1.min.js"></script>
+  <style>
+    .container *{
+      display: block;
+      border: 1px solid lightgray;
+      padding: 5px;
+      margin: 15px;
+    }
+  </style>
+  <script>
+    $(function() {
+
+      $("button").click(function() {                  
+        // .parent() 메소드는 선택한 요소의 부모(parent) 요소를 선택합니다.
+        // 해당 요소의 css 스타일을 변경.
+        $("p").parent().css("border", "2px solid red");
+      });
+    });
+  </script>
+</head>
+<body>
+  <h1>.parent() 메소드</h1>
+	<div class="container">
+		<div>div 요소
+			<ul>ul 요소
+				<li>li 요소</li>
+				<li>li 요소
+					<p>p 요소 (기준)
+						<span>span 요소</span>
+					</p>
+				</li>
+				<li>li 요소</li>
+			</ul>
+		</div>
+	</div>
+
+	<button>p 요소의 부모 요소</button>
+</body>
+</html>
